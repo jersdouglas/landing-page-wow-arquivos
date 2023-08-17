@@ -89,9 +89,7 @@ header{
     border: 0;
     outline: 0;
     cursor: pointer;
-    animation-name: rainbow;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
+    animation: rainbow .5s infinite;
     color: white;
     width: 90%;
     font-size: 30px;
@@ -171,9 +169,7 @@ div.linha{
 .mosaico__img img{
     width: 90%;
     transform: rotateY(0deg);
-    animation-name: zoom;
-    animation-duration: 5s;
-    animation-iteration-count: 2;
+    animation: zoom 5s 2s 2;
     background-position: center;
     background-size: cover;
     -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
@@ -212,14 +208,7 @@ footer input[type=button]{
     cursor: pointer;
     outline: 0;
     border: none;
-    animation-name: BoldToNormal;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-}
-@keyframes BoldToNormal{
-    0% {font-weight: bold; font-size: 10px;}
-    50% {font-weight: normal; font-size: 13px;}
-    100% {font-weight: bold; font-size: 10px;}
+    animation: BoldToNormal .5s infinite;
 }
 
 footer input[type=button]:hover{
@@ -281,6 +270,11 @@ footer input[type=button]:hover{
 }
 /*---------*/
 /*-KeyFrames-*/
+@keyframes BoldToNormal{
+    0% {font-weight: bold; font-size: 10px;}
+    50% {font-weight: normal; font-size: 13px;}
+    100% {font-weight: bold; font-size: 10px;}
+}
 @keyframes zoom {
     25% {transform: rotateY(90deg);}
     50% {transform: rotateY(180deg);}
